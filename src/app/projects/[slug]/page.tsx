@@ -56,7 +56,7 @@ export default async function ProjectDetailPage({
 
   return (
     <article className="py-20 sm:py-28">
-      <Container className="max-w-3xl">
+      <Container>
         <Link
           href="/projects"
           className="mb-10 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
@@ -121,7 +121,7 @@ export default async function ProjectDetailPage({
             src={project.thumbnail}
             alt={`${project.title} preview`}
             fill
-            sizes="(min-width: 768px) 768px, 100vw"
+            sizes="(min-width: 1280px) 1216px, 100vw"
             className="object-cover"
             priority
           />
