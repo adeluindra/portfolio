@@ -1,9 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { Input } from "@/components/ui/Input";
 import { ProjectGrid } from "@/components/project/ProjectGrid";
+import { Pagination } from "@/components/ui/Pagination";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/types";
 
@@ -12,6 +13,8 @@ interface ProjectsExplorerProps {
 }
 
 const ALL = "All";
+/** Projects shown per page before pagination kicks in. */
+const PAGE_SIZE = 6;
 
 /**
  * Client-side project browser with text search and tech-stack filtering.
@@ -22,6 +25,7 @@ const ALL = "All";
 export function ProjectsExplorer({ projects }: ProjectsExplorerProps) {
   const [query, setQuery] = useState("");
   const [activeTech, setActiveTech] = useState<string>(ALL);
+  const [page, setPage] = useState(1);
 
   // Unique, sorted list of every tech across all projects (+ an "All" option).
   const techOptions = useMemo(() => {
@@ -51,6 +55,25 @@ export function ProjectsExplorer({ projects }: ProjectsExplorerProps) {
   }, [projects, query, activeTech]);
 
   const hasActiveFilters = query.trim() !== "" || activeTech !== ALL;
+
+  // Reset to the first page whenever the result set changes (new search/filter).
+  useEffect(() => {
+    setPage(1);
+  }, [query, activeTech]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  // Guard against a stale page beyond the current range.
+  const currentPage = Math.min(page, totalPages);
+  const pageStart = (currentPage - 1) * PAGE_SIZE;
+  const paginated = filtered.slice(pageStart, pageStart + PAGE_SIZE);
+
+  function goToPage(next: number) {
+    setPage(next);
+    // Bring the top of the results into view after a page change.
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
 
   return (
     <div>
@@ -134,7 +157,15 @@ export function ProjectsExplorer({ projects }: ProjectsExplorerProps) {
             No projects match your search. Try a different keyword or tech.
           </p>
         ) : (
-          <ProjectGrid projects={filtered} />
+          <>
+            <ProjectGrid projects={paginated} />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={goToPage}
+              className="mt-12"
+            />
+          </>
         )}
       </div>
     </div>
