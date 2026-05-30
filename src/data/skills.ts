@@ -2,8 +2,7 @@ import { Code2, Server, Database, Wrench } from "lucide-react";
 import type { SkillCategory } from "@/types";
 
 /**
- * Skills grouped by category (docs/content-strategy.md).
- * Edit the skill lists to match your actual stack.
+ * Skills grouped by category (sourced from CV → KEAHLIAN).
  */
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
@@ -11,10 +10,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     title: "Frontend",
     icon: Code2,
     skills: [
-      { name: "React" },
-      { name: "Next.js" },
-      { name: "TypeScript" },
+      { name: "HTML" },
+      { name: "CSS" },
       { name: "JavaScript" },
+      { name: "Next.js" },
       { name: "Tailwind CSS" },
     ],
   },
@@ -23,26 +22,22 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     title: "Backend",
     icon: Server,
     skills: [
-      { name: "Node.js" },
-      { name: "Express" },
-      { name: "REST API" },
+      { name: "PHP" },
+      { name: "Laravel" },
+      { name: "Python" },
+      { name: "Express.js" },
     ],
   },
   {
     id: "database",
     title: "Database",
     icon: Database,
-    skills: [{ name: "PostgreSQL" }, { name: "MySQL" }],
+    skills: [{ name: "MySQL" }, { name: "Supabase" }],
   },
   {
     id: "tools",
     title: "Tools",
     icon: Wrench,
-    skills: [
-      { name: "Git" },
-      { name: "GitHub" },
-      { name: "Figma" },
-      { name: "Postman" },
-    ],
+    skills: [{ name: "Git" }, { name: "GitHub" }, { name: "Postman" }],
   },
 ];

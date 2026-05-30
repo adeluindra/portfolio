@@ -8,17 +8,20 @@ const HIGHLIGHTS = [
   {
     icon: GraduationCap,
     title: "Education",
-    description: "Informatics Engineering student focused on software development.",
+    description:
+      "Informatics Engineering student at Universitas Muhammadiyah Cirebon (GPA 3.44).",
   },
   {
     icon: Rocket,
     title: "Focus",
-    description: "Modern frontend and fullstack web development with the React ecosystem.",
+    description:
+      "Frontend and fullstack web development with Next.js, Laravel, and Supabase.",
   },
   {
     icon: MapPin,
     title: "Goal",
-    description: "Growing into a well-rounded software engineer who ships real products.",
+    description:
+      "Building technology that delivers a positive impact for the community.",
   },
 ] as const;
 
@@ -40,20 +43,21 @@ export function AboutSection() {
           <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
               I&apos;m {SITE_CONFIG.name}, a {SITE_CONFIG.role.toLowerCase()} and
-              Informatics Engineering student passionate about building modern,
-              user-focused web applications. I enjoy turning complex problems
-              into clean, intuitive interfaces.
+              Informatics Engineering student at Universitas Muhammadiyah
+              Cirebon. I&apos;m deeply interested in technology, especially
+              programming and web development.
             </p>
             <p>
-              My work centers on the React and Next.js ecosystem, with a strong
-              emphasis on performance, accessibility, and maintainable
-              architecture. I care about writing code that other developers can
-              read and build on.
+              I work across the stack with Next.js, Laravel, and Supabase,
+              having built platforms like ParentCare, SIBADA for BPBD Kabupaten
+              Cirebon, and a resident management system for Perumahan Kota Baru
+              Keandra.
             </p>
             <p>
-              Outside of coursework, I take on freelance projects and contribute
-              to campus initiatives, applying what I learn to ship things people
-              actually use.
+              I believe technology can be a means to create a positive impact
+              for society. That&apos;s why I keep developing myself by following
+              the latest industry trends while sharpening my problem-solving,
+              teamwork, and communication skills.
             </p>
           </div>
         </ScrollReveal>

@@ -47,9 +47,9 @@ export function HeroSection() {
 
           <FadeIn delay={0.65} className="mt-5">
             <p className="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground lg:mx-0">
-              I build modern, scalable, and user-focused web applications with
-              Next.js, TypeScript, and React. Turning ideas into reliable
-              digital products.
+              I build modern, user-focused web applications with Next.js,
+              TypeScript, and Laravel. I believe technology can create a positive
+              impact, and I keep growing by learning the latest industry trends.
             </p>
           </FadeIn>
 

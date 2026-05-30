@@ -4,25 +4,24 @@ import type { Social } from "@/types";
 
 /**
  * Social / contact links.
- * Replace the placeholder URLs and email with your real handles.
  */
 export const SOCIALS: Social[] = [
   {
     label: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/adeluindra",
     icon: GithubIcon,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/mohsyafiqadeluwindra/",
     icon: LinkedinIcon,
   },
   {
     label: "Email",
-    href: "mailto:you@example.com",
+    href: "mailto:mohsyafiqadeluwindra@gmail.com",
     icon: Mail,
   },
 ];
 
 /** Direct email address used by the contact section. */
-export const CONTACT_EMAIL = "you@example.com";
+export const CONTACT_EMAIL = "mohsyafiqadeluwindra@gmail.com";

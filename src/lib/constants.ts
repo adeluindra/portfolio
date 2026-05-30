@@ -2,23 +2,23 @@
  * Site-wide configuration and constants.
  * Centralizes identity, navigation, and URLs so they are defined once
  * and reused across SEO metadata, navbar, and footer.
- *
- * NOTE: Replace placeholder values (name, email, social URLs) with real data.
  */
 
 export const SITE_CONFIG = {
-  name: "Your Name",
-  role: "Software Engineer",
-  title: "Your Name | Software Engineer",
+  name: "Moh Syafiq Ade Luwindra",
+  role: "Web Developer",
+  title: "Moh Syafiq Ade Luwindra | Web Developer",
   description:
-    "Software Engineer and Informatics Engineering Student specializing in modern web applications using Next.js, TypeScript, and React.",
-  url: "https://yourdomain.com",
-  locale: "en_US",
+    "Web Developer and Informatics Engineering student at Universitas Muhammadiyah Cirebon, building modern web applications with Next.js, TypeScript, Laravel, and Supabase.",
+  // TODO: replace with your real domain once deployed (e.g. your Vercel URL).
+  url: "https://mohsyafiqadeluwindra.vercel.app",
+  locale: "id_ID",
   keywords: [
-    "Software Engineer Portfolio",
+    "Moh Syafiq Ade Luwindra",
+    "Web Developer Portfolio",
     "Frontend Developer Portfolio",
     "Next.js Developer",
-    "Web Developer Portfolio",
+    "Laravel Developer",
     "React Developer",
     "TypeScript",
   ],

@@ -1,64 +1,37 @@
 import type { Experience } from "@/types";
 
 /**
- * Professional experience timeline (docs/content-strategy.md).
- * Focus on impact and measurable outcomes. Replace with your real history.
+ * Professional experience timeline.
+ * Sourced from CV (Moh Syafiq Ade Luwindra).
  */
 export const EXPERIENCES: Experience[] = [
   {
-    id: "exp-internship",
-    role: "Frontend Developer Intern",
-    organization: "Tech Company",
+    id: "exp-grage-media",
+    role: "Web Developer",
+    organization: "PT Grage Media Technology",
     type: "Internship",
-    startDate: "Jan 2025",
-    endDate: "Present",
+    startDate: "Okt 2025",
+    endDate: "Des 2025",
     description:
-      "Built and maintained responsive user interfaces for the company's web platform using Next.js and TypeScript.",
+      "Membangun dan mengoptimalkan website untuk klien instansi dan perumahan, dengan fokus pada penyajian informasi dan performa lintas perangkat.",
     achievements: [
-      "Improved page load performance by 30% through code-splitting and image optimization.",
-      "Implemented a reusable component library adopted across 3 internal projects.",
+      "Mengembangkan Website SIBADA (Sistem Informasi Bencana Daerah) untuk BPBD Kabupaten Cirebon sebagai platform penyajian informasi kebencanaan.",
+      "Membangun Website KBK Management untuk manajemen warga pada Perumahan Kota Baru Keandra.",
+      "Mengoptimalkan tampilan dan performa website agar dapat diakses dengan baik di berbagai perangkat.",
     ],
   },
   {
-    id: "exp-freelance",
-    role: "Freelance Web Developer",
-    organization: "Self-employed",
-    type: "Freelance",
-    startDate: "2024",
-    endDate: "Present",
+    id: "exp-dbs-coding-camp",
+    role: "Front-End and Back-End Developer Cohort",
+    organization: "Coding Camp powered by DBS Foundation",
+    type: "Bootcamp",
+    startDate: "Feb 2025",
+    endDate: "Jul 2025",
     description:
-      "Designed and developed custom websites and web apps for small businesses and individual clients.",
+      "Terpilih sebagai salah satu dari 3.000 peserta dari lebih dari 63.000 pendaftar di seluruh Indonesia untuk program pengembangan front-end dan back-end.",
     achievements: [
-      "Delivered 5+ production websites with a focus on performance and SEO.",
-      "Maintained a 100% on-time delivery record across all client projects.",
-    ],
-  },
-  {
-    id: "exp-organization",
-    role: "Web Division Lead",
-    organization: "Campus Student Organization",
-    type: "Organization",
-    startDate: "2023",
-    endDate: "2024",
-    description:
-      "Led a small team building and maintaining the organization's web presence and event platforms.",
-    achievements: [
-      "Coordinated a 4-person team to ship an event registration site serving 500+ users.",
-      "Introduced Git-based workflow that reduced merge conflicts and improved collaboration.",
-    ],
-  },
-  {
-    id: "exp-campus",
-    role: "Fullstack Developer",
-    organization: "Campus Capstone Project",
-    type: "Campus Project",
-    startDate: "2023",
-    endDate: "2023",
-    description:
-      "Developed a fullstack application as part of an academic capstone, covering frontend, backend, and database.",
-    achievements: [
-      "Designed the database schema and REST API powering the application.",
-      "Presented the project and received top marks from the review panel.",
+      "Mengembangkan ParentCare, platform konsultasi parenting berbasis digital yang menyediakan dukungan bagi orang tua.",
+      "Membangun fitur dukungan untuk pengelolaan tumbuh kembang anak dan kesehatan mental keluarga.",
     ],
   },
 ];

@@ -1,124 +1,98 @@
 import type { Project } from "@/types";
 
 /**
- * Portfolio projects (docs/PRD.md → minimum 6).
+ * Portfolio projects (sourced from CV).
  * `featured: true` projects appear in the homepage "Featured Projects" section.
  * Detail pages are generated from `slug` at /projects/[slug].
  *
- * Replace placeholder content and images with your real projects.
- * Thumbnails should live in /public/projects/ and use descriptive filenames.
+ * TODO: add `githubUrl` / `demoUrl` for each project once the repo and live
+ * links are available, and drop real screenshots into /public/projects/.
  */
 export const PROJECTS: Project[] = [
   {
-    slug: "sibada",
-    title: "SIBADA",
-    summary: "Village administration information system.",
+    slug: "parentcare",
+    title: "ParentCare",
+    summary: "Platform konsultasi parenting berbasis digital.",
     description:
-      "A web-based information system that digitizes village administrative services, letter requests, and population data management.",
+      "Platform konsultasi parenting berbasis digital yang menyediakan dukungan bagi orang tua dalam mengelola tumbuh kembang anak dan kesehatan mental keluarga.",
     thumbnail: "/projects/placeholder.svg",
-    techStack: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    techStack: ["Next.js", "Tailwind CSS", "Express.js", "Supabase"],
     featured: true,
-    githubUrl: "https://github.com/yourusername/sibada",
-    demoUrl: "https://sibada.example.com",
     problem:
-      "Village administrative processes relied on manual paperwork, causing slow service and lost records.",
+      "Orang tua membutuhkan ruang terpercaya untuk berkonsultasi dan saling mendukung seputar pengasuhan anak dan kesehatan mental keluarga.",
     solution:
-      "Built a centralized platform for digital letter requests, resident data, and an admin dashboard with role-based access.",
+      "Membangun platform digital dengan kuis pencocokan, forum komunitas, dan artikel edukatif untuk mendukung orang tua.",
     features: [
-      "Digital letter request workflow",
-      "Resident data management",
-      "Role-based admin dashboard",
-      "Searchable document archive",
+      "Fitur Parent-Match Quiz",
+      "Forum & Komunitas ParentCare",
+      "Artikel edukasi parenting",
     ],
     gallery: [
-      { src: "/projects/placeholder.svg", alt: "SIBADA dashboard overview" },
-      { src: "/projects/placeholder.svg", alt: "SIBADA letter request form" },
+      { src: "/projects/placeholder.svg", alt: "Tampilan beranda ParentCare" },
     ],
     year: "2025",
   },
   {
-    slug: "parentcare",
-    title: "ParentCare",
-    summary: "Child growth & health tracking app.",
+    slug: "sibada",
+    title: "SIBADA",
+    summary: "Sistem Informasi Bencana Daerah untuk BPBD Kabupaten Cirebon.",
     description:
-      "A mobile-first web app that helps parents track their child's growth milestones, vaccination schedule, and health records.",
+      "Website penyajian informasi kebencanaan yang dikembangkan untuk BPBD Kabupaten Cirebon, membantu masyarakat mengakses informasi bencana daerah.",
     thumbnail: "/projects/placeholder.svg",
-    techStack: ["React", "Node.js", "Express", "MySQL"],
+    // TODO: confirm the exact tech stack used on SIBADA.
+    techStack: ["Laravel", "MySQL"],
     featured: true,
-    githubUrl: "https://github.com/yourusername/parentcare",
-    demoUrl: "https://parentcare.example.com",
     problem:
-      "Parents struggled to keep track of scattered health records and vaccination schedules for their children.",
+      "Informasi kebencanaan daerah perlu disajikan secara terpusat dan mudah diakses oleh masyarakat.",
     solution:
-      "Created a single app to log growth data, visualize trends, and send reminders for upcoming vaccinations.",
+      "Membangun platform web yang menyajikan informasi kebencanaan untuk BPBD Kabupaten Cirebon.",
     features: [
-      "Growth milestone tracking with charts",
-      "Vaccination schedule & reminders",
-      "Health record history",
+      "Penyajian informasi kebencanaan daerah",
+      "Tampilan responsif lintas perangkat",
     ],
-    gallery: [
-      { src: "/projects/placeholder.svg", alt: "ParentCare growth chart" },
-    ],
-    year: "2024",
+    year: "2025",
   },
   {
-    slug: "devlink",
-    title: "DevLink",
-    summary: "Link-in-bio platform for developers.",
+    slug: "kbk-management",
+    title: "KBK Management",
+    summary: "Sistem manajemen warga Perumahan Kota Baru Keandra.",
     description:
-      "A customizable link-in-bio platform tailored for developers to showcase projects, socials, and tech stack in one place.",
+      "Aplikasi manajemen warga untuk Perumahan Kota Baru Keandra, mencakup pengelolaan data warga, rumah, serta struktur RT/RW.",
+    thumbnail: "/projects/placeholder.svg",
+    techStack: ["Laravel", "MySQL"],
+    featured: true,
+    problem:
+      "Pengelolaan data warga dan administrasi perumahan masih manual dan tersebar.",
+    solution:
+      "Membangun sistem terpusat untuk mengelola data warga, rumah, dan struktur RT/RW dalam satu aplikasi.",
+    features: [
+      "Pengelolaan data warga",
+      "Pengelolaan data rumah",
+      "Manajemen RT/RW",
+    ],
+    year: "2025",
+  },
+  {
+    slug: "weather-app",
+    title: "Weather App",
+    summary: "Cari informasi cuaca untuk kota mana pun di dunia.",
+    description:
+      "Aplikasi pencarian cuaca yang menampilkan informasi cuaca terkini untuk kota mana pun di seluruh dunia.",
     thumbnail: "/projects/placeholder.svg",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    featured: true,
-    githubUrl: "https://github.com/yourusername/devlink",
-    demoUrl: "https://devlink.example.com",
-    problem:
-      "Developers needed a single shareable page to present their work without building one from scratch.",
-    solution:
-      "Built a themeable, fast link-in-bio app with developer-focused widgets and analytics.",
-    features: [
-      "Customizable themes",
-      "Developer widgets (GitHub stats, tech stack)",
-      "Click analytics",
-    ],
-    year: "2024",
+    featured: false,
+    year: "2025",
   },
   {
-    slug: "taskflow",
-    title: "TaskFlow",
-    summary: "Collaborative kanban task manager.",
+    slug: "image-gallery-app",
+    title: "Image Gallery App",
+    summary: "Jelajahi jutaan foto berkualitas tinggi dari seluruh dunia.",
     description:
-      "A real-time kanban board for small teams to organize tasks, track progress, and collaborate efficiently.",
+      "Aplikasi galeri gambar untuk menjelajahi jutaan foto berkualitas tinggi dari fotografer berbakat di seluruh dunia, memanfaatkan Unsplash API.",
     thumbnail: "/projects/placeholder.svg",
-    techStack: ["React", "Node.js", "PostgreSQL"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Unsplash API"],
     featured: false,
-    githubUrl: "https://github.com/yourusername/taskflow",
-    year: "2023",
-  },
-  {
-    slug: "weathernow",
-    title: "WeatherNow",
-    summary: "Minimal weather dashboard.",
-    description:
-      "A clean weather dashboard with location search, hourly forecasts, and a responsive, accessible interface.",
-    thumbnail: "/projects/placeholder.svg",
-    techStack: ["Next.js", "TypeScript", "REST API"],
-    featured: false,
-    githubUrl: "https://github.com/yourusername/weathernow",
-    demoUrl: "https://weathernow.example.com",
-    year: "2023",
-  },
-  {
-    slug: "shopkart",
-    title: "ShopKart",
-    summary: "E-commerce storefront demo.",
-    description:
-      "A demo e-commerce storefront with product catalog, cart, and checkout flow built to explore commerce patterns.",
-    thumbnail: "/projects/placeholder.svg",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-    featured: false,
-    githubUrl: "https://github.com/yourusername/shopkart",
-    year: "2023",
+    year: "2025",
   },
 ];
 
@@ -129,4 +103,3 @@ export const FEATURED_PROJECTS = PROJECTS.filter((p) => p.featured);
 export function getProjectBySlug(slug: string): Project | undefined {
   return PROJECTS.find((p) => p.slug === slug);
 }
-

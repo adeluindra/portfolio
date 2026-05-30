@@ -26,7 +26,8 @@ export type ExperienceType =
   | "Internship"
   | "Freelance"
   | "Organization"
-  | "Campus Project";
+  | "Campus Project"
+  | "Bootcamp";
 
 /** A single entry in the experience timeline. */
 export interface Experience {
