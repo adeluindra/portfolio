@@ -11,13 +11,15 @@ interface MobileMenuProps {
   open: boolean;
   onClose: () => void;
   activeId: string;
+  /** Whether the current route is the homepage (controls anchor prefixing). */
+  isHome: boolean;
 }
 
 /**
  * Full-screen slide-in navigation for mobile.
  * Locks body scroll while open and closes on link click or Escape.
  */
-export function MobileMenu({ open, onClose, activeId }: MobileMenuProps) {
+export function MobileMenu({ open, onClose, activeId, isHome }: MobileMenuProps) {
   useEffect(() => {
     if (!open) return;
 
@@ -72,11 +74,11 @@ export function MobileMenu({ open, onClose, activeId }: MobileMenuProps) {
 
         <nav className="mt-8 flex flex-col gap-1">
           {NAV_ITEMS.map((item) => {
-            const isActive = item.href === `#${activeId}`;
+            const isActive = isHome && item.href === `#${activeId}`;
             return (
               <a
                 key={item.href}
-                href={item.href}
+                href={isHome ? item.href : `/${item.href}`}
                 onClick={onClose}
                 aria-current={isActive ? "true" : undefined}
                 className={cn(

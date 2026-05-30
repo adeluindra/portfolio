@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Download, Menu } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -20,6 +21,15 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const activeId = useActiveSection(SECTION_IDS);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  /**
+   * Resolve a section anchor to a usable href.
+   * On the homepage the in-page anchor (#about) works directly; on any other
+   * route we prefix it with "/" so it navigates home first, then scrolls.
+   */
+  const sectionHref = (href: string) => (isHome ? href : `/${href}`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -39,7 +49,7 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between">
         <a
-          href="#home"
+          href={sectionHref("#home")}
           className="text-lg font-bold tracking-tight font-display"
           aria-label={`${SITE_CONFIG.name} — home`}
         >
@@ -50,11 +60,11 @@ export function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
           {NAV_ITEMS.map((item) => {
-            const isActive = item.href === `#${activeId}`;
+            const isActive = isHome && item.href === `#${activeId}`;
             return (
               <a
                 key={item.href}
-                href={item.href}
+                href={sectionHref(item.href)}
                 aria-current={isActive ? "true" : undefined}
                 className={cn(
                   "rounded-lg px-3 py-2 text-sm font-medium transition-colors",
@@ -98,6 +108,7 @@ export function Navbar() {
         open={menuOpen}
         onClose={() => setMenuOpen(false)}
         activeId={activeId}
+        isHome={isHome}
       />
     </header>
   );

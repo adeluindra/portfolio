@@ -16,7 +16,7 @@ export function Footer() {
           {/* Brand */}
           <div className="text-center sm:text-left">
             <a
-              href="#home"
+              href="/#home"
               className="text-lg font-bold tracking-tight font-display"
             >
               {SITE_CONFIG.name}
@@ -33,7 +33,7 @@ export function Footer() {
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
                   <a
-                    href={item.href}
+                    href={`/${item.href}`}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.label}
