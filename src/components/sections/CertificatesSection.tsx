@@ -7,7 +7,7 @@ import { CERTIFICATES } from "@/data/certificates";
  * How many certificates to preview in the home carousel before sending people
  * to the full /certificates page. Change this number to show more or fewer.
  */
-const CAROUSEL_LIMIT = 6;
+const CAROUSEL_LIMIT = 8;
 
 /**
  * Certificates section: a horizontally scrollable row of a few featured
@@ -15,7 +15,7 @@ const CAROUSEL_LIMIT = 6;
  * while every certificate stays reachable on /certificates.
  */
 export function CertificatesSection() {
-  const previewCertificates = CERTIFICATES.slice(8, CAROUSEL_LIMIT);
+  const previewCertificates = CERTIFICATES.slice(0, CAROUSEL_LIMIT);
 
   return (
     <Section id="certificates">
