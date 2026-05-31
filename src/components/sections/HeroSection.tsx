@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -8,7 +9,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { TextReveal } from "@/components/animations/TextReveal";
 import { MagneticButton } from "@/components/animations/MagneticButton";
 import { AuroraBackground } from "@/components/animations/AuroraBackground";
-import { SITE_CONFIG, CV_PATH } from "@/lib/constants";
+import { SITE_CONFIG, CV_PATH, PROFILE_IMAGE } from "@/lib/constants";
 import { SOCIALS } from "@/data/socials";
 
 /**
@@ -111,8 +112,8 @@ export function HeroSection() {
 }
 
 /**
- * Decorative profile card with a gradient border and floating animation.
- * Replace the initials block with a <Image> of your professional photo.
+ * Profile card with a gradient border, glow, and the professional photo.
+ * The image lives at {PROFILE_IMAGE} in /public.
  */
 function HeroProfileCard() {
   return (
@@ -121,16 +122,20 @@ function HeroProfileCard() {
       <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/30 via-accent/20 to-secondary/30 blur-2xl" />
 
       <div className="group relative h-full overflow-hidden rounded-[2rem] border border-border bg-card p-1 shadow-xl">
-        <div className="flex h-full flex-col items-center justify-center rounded-[1.7rem] bg-gradient-to-br from-muted to-card">
-          <div className="flex size-32 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-4xl font-bold text-primary-foreground">
-            {SITE_CONFIG.name
-              .split(" ")
-              .map((n) => n[0])
-              .join("")
-              .slice(0, 2)}
+        <div className="relative h-full overflow-hidden rounded-[1.7rem]">
+          <Image
+            src={PROFILE_IMAGE}
+            alt={`${SITE_CONFIG.name} — ${SITE_CONFIG.role}`}
+            fill
+            priority
+            sizes="(min-width: 1024px) 28rem, 0px"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+          {/* Subtle gradient so the name stays readable over the photo */}
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-5 pt-12">
+            <p className="text-lg font-semibold text-white">{SITE_CONFIG.name}</p>
+            <p className="text-sm text-white/80">{SITE_CONFIG.role}</p>
           </div>
-          <p className="mt-6 text-lg font-semibold">{SITE_CONFIG.name}</p>
-          <p className="text-sm text-muted-foreground">{SITE_CONFIG.role}</p>
         </div>
       </div>
     </div>

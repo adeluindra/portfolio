@@ -42,3 +42,6 @@ export const NAV_ITEMS: NavItem[] = [
 
 /** Path to the downloadable CV/resume in the public folder. */
 export const CV_PATH = "/cv.pdf";
+
+/** Path to the profile photo shown in the hero section (public folder). */
+export const PROFILE_IMAGE = "/profile.jpg";
