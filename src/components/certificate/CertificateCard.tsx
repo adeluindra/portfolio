@@ -1,15 +1,27 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
+import { cn } from "@/lib/utils";
 import type { Certificate } from "@/types";
 
 /**
  * A certificate card with preview image, title, issuer, and credential link.
  * Hover: image zoom + lift.
  */
-export function CertificateCard({ certificate }: { certificate: Certificate }) {
+export function CertificateCard({
+  certificate,
+  className,
+}: {
+  certificate: Certificate;
+  className?: string;
+}) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <article
+      className={cn(
+        "group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+        className
+      )}
+    >
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <Image
           src={certificate.image}
