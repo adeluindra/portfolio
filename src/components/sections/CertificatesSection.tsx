@@ -1,17 +1,22 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { Button } from "@/components/ui/Button";
 import { CertificateCarousel } from "@/components/certificate/CertificateCarousel";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 import { CERTIFICATES } from "@/data/certificates";
 
 /**
- * Certificates section: a horizontally scrollable row of credentials with a
- * link to the full listing. Keeps the home page compact while every
- * certificate stays reachable on /certificates.
+ * How many certificates to preview in the home carousel before sending people
+ * to the full /certificates page. Change this number to show more or fewer.
+ */
+const CAROUSEL_LIMIT = 6;
+
+/**
+ * Certificates section: a horizontally scrollable row of a few featured
+ * credentials with a link to the full listing. Keeps the home page compact
+ * while every certificate stays reachable on /certificates.
  */
 export function CertificatesSection() {
+  const previewCertificates = CERTIFICATES.slice(8, CAROUSEL_LIMIT);
+
   return (
     <Section id="certificates">
       <SectionHeading
@@ -21,17 +26,8 @@ export function CertificatesSection() {
       />
 
       <ScrollReveal className="mt-14">
-        <CertificateCarousel certificates={CERTIFICATES} />
+        <CertificateCarousel certificates={previewCertificates} />
       </ScrollReveal>
-
-      <div className="mt-12 text-center">
-        <Button asChild variant="outline" size="lg">
-          <Link href="/certificates">
-            View all certificates
-            <ArrowRight aria-hidden="true" />
-          </Link>
-        </Button>
-      </div>
     </Section>
   );
 }
