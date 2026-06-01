@@ -1,12 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 import type { Certificate } from "@/types";
 
+/** Shown when a certificate image is missing or fails to load. */
+const FALLBACK_IMAGE = "/certificates/placeholder.svg";
+
 /**
  * A certificate card with preview image, title, issuer, and credential link.
- * Hover: image zoom + lift.
+ * Hover: image zoom + lift. If the source image is missing (e.g. not yet
+ * uploaded to /public/certificates), it gracefully falls back to a placeholder
+ * instead of showing a broken image.
  */
 export function CertificateCard({
   certificate,
@@ -15,6 +23,8 @@ export function CertificateCard({
   certificate: Certificate;
   className?: string;
 }) {
+  const [imgSrc, setImgSrc] = useState(certificate.image);
+
   return (
     <article
       className={cn(
@@ -24,11 +34,12 @@ export function CertificateCard({
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <Image
-          src={certificate.image}
+          src={imgSrc}
           alt={`${certificate.title} certificate`}
           fill
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={() => setImgSrc(FALLBACK_IMAGE)}
         />
       </div>
 

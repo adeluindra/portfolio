@@ -13,7 +13,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Sertifikat Kompetensi — Junior Web Developer (Pengembang Web Pratama)",
     issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
     date: "Agustus 2025",
-    image: "/certificates/bnsp-jwd.webp",
+    image: "/certificates/bnsp-jwd.png",
   },
 
   {
@@ -21,7 +21,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Front-End and Back-End Developer Cohort",
     issuer: "Coding Camp powered by DBS Foundation",
     date: "2025",
-    image: "/certificates/dbs-coding-camp.webp",
+    image: "/certificates/dbs-coding-camp.png",
   },
 
   {
@@ -29,7 +29,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Belajar Pengembangan Web Intermediate",
     issuer: "Dicoding Indonesia",
     date: "Mei 2025",
-    image: "/certificates/web-intermediate.webp",
+    image: "/certificates/web-intermediate.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/07Z63N902ZQR",
   },
@@ -39,7 +39,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Belajar Back-End Pemula dengan JavaScript",
     issuer: "Dicoding Indonesia",
     date: "Mei 2025",
-    image: "/certificates/backend-javascript.webp",
+    image: "/certificates/backend-javascript.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/0LZ0RV39NP65",
   },
@@ -49,7 +49,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Belajar Fundamental Front-End Web Development",
     issuer: "Dicoding Indonesia",
     date: "Maret 2025",
-    image: "/certificates/frontend-fundamental.webp",
+    image: "/certificates/frontend-fundamental.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/NVP7523DVXR0",
   },
@@ -59,7 +59,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Belajar Membuat Front-End Web untuk Pemula",
     issuer: "Dicoding Indonesia",
     date: "Maret 2025",
-    image: "/certificates/frontend-pemula.webp",
+    image: "/certificates/frontend-pemula.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/07Z63QNRWZQR",
   },
@@ -69,7 +69,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Belajar Dasar Pemrograman JavaScript",
     issuer: "Dicoding Indonesia",
     date: "Maret 2025",
-    image: "/certificates/javascript-dasar.webp",
+    image: "/certificates/javascript-dasar.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/RVZKWMRVEZD5",
   },
@@ -79,7 +79,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Belajar Dasar Pemrograman Web",
     issuer: "Dicoding Indonesia",
     date: "Februari 2025",
-    image: "/certificates/web-dasar.webp",
+    image: "/certificates/web-dasar.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/1OP82J3RLPQK",
   },
@@ -89,7 +89,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
     issuer: "Dicoding Indonesia",
     date: "Februari 2025",
-    image: "/certificates/software-developer.webp",
+    image: "/certificates/software-developer.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/L4PQEQ6V7PO1",
   },
@@ -99,7 +99,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Belajar Dasar Git dengan GitHub",
     issuer: "Dicoding Indonesia",
     date: "Februari 2025",
-    image: "/certificates/git-github.webp",
+    image: "/certificates/git-github.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/MRZMN8N70PYQ",
   },
@@ -109,7 +109,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
     issuer: "Dicoding Indonesia",
     date: "Februari 2025",
-    image: "/certificates/programming-logic.webp",
+    image: "/certificates/programming-logic.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/53XEDYNEKPRN",
   },
@@ -120,7 +120,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "English for Business Communication",
     issuer: "The British Institute (TBI)",
     date: "Juni 2025",
-    image: "/certificates/english-business.webp",
+    image: "/certificates/english-business.png",
   },
 
   {
@@ -128,7 +128,7 @@ export const CERTIFICATES: Certificate[] = [
     title: "Financial Literacy 101",
     issuer: "Dicoding Indonesia",
     date: "April 2025",
-    image: "/certificates/financial-literacy.webp",
+    image: "/certificates/financial-literacy.png",
     credentialUrl:
       "https://www.dicoding.com/certificates/ERZRE6D6QXYV",
   },
@@ -138,6 +138,6 @@ export const CERTIFICATES: Certificate[] = [
     title: "AMD Classroom Talkshow Participant",
     issuer: "AMD Indonesia & Universitas Muhammadiyah Cirebon",
     date: "Februari 2025",
-    image: "/certificates/amd-classroom.webp",
+    image: "/certificates/amd-classroom.png",
   },
 ];
