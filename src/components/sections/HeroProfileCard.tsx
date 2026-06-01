@@ -122,15 +122,15 @@ export function HeroProfileCard() {
             </div>
 
             {/* Avatar with gradient border */}
-            <div className="mt-6 size-40 rounded-2xl bg-gradient-to-br from-primary via-accent to-secondary p-0.5">
-              <div className="relative h-full w-full overflow-hidden rounded-[0.9rem] bg-card">
+            <div className="mt-6 size-40 rounded-2xl bg-gradient-to-br from-primary via-accent to-secondary p-[2px] shadow-lg">
+              <div className="relative size-full overflow-hidden rounded-[14px] bg-card">
                 <Image
                   src={PROFILE_IMAGE}
                   alt={`${SITE_CONFIG.name} — ${SITE_CONFIG.role}`}
                   fill
                   priority
                   sizes="160px"
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
               </div>
             </div>
